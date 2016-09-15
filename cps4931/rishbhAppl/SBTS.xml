@@ -1,0 +1,5 @@
+<Context path="/rishbhAppl" docBase="/home/student/ranaris/cps4931/rishbhAppl/build" debug="5" reloadable="true" crossContext="true">
+  <Logger directory="logs" prefix="localhost_SBTS" suffix="log" timestamp="true" /> 
+  <Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource" maxActive="100" maxIdle="30" maxWait="10000" username="Pinnacle" password="pinbook4235" driverClassName="com.mysql.jdbc.Driver" removeAbandoned="true" url="jdbc:mysql://131.125.4.235:3306/SBTS? autoReconnect=true" /> 
+  </Context>
+
