@@ -48,8 +48,7 @@ try{
         
 	// save this list of books in the bean
         
-        } 
-}
+        }
 
 catch(Exception e){
     e.printStackTrace();
