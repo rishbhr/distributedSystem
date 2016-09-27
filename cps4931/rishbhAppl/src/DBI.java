@@ -27,7 +27,7 @@ public class DBI{
     String [] tech ={"EmpID", "EmpFirstName", "EmpLastName", "count(t.TaskID)"};
     String [] selectedcontract = {"ContractID", "AuthorID", "EmpID", "AuthorFirstName", "AuthorLastName", "EmpFirstName", "EmpLastName", "InitialTitle","PricePublish", "RoyaltyRate", "BookDoctor", "PromotionWeeks", "DateContract", "ContractStatus"};
     String [] contract = {"ContractID", "AuthorID", "AuthorFirstName", "AuthorLastName", "EmpID", "EmpFirstName", "EmpLastName", "InitialTitle", "ContractStatus"};
-    String [] Task = {"TaskID", "StartDate", "EndDate", "BookID","TaskType", "TaskNotes", "TaskStatus", "TechnicianID", "EmpFirstName", "EmpLastName"};
+    String [] Task = {"TaskID", "StartDate", "EndDate", "BookID","TaskType", "TaskNotes", "TaskStatus", "TechnicianID"};
     String [] selecttask = {"TaskID","Title", "TaskType", "TaskStatus", "TaskNotes", "StartDate", "FileName"};
     public void DBI() throws NamingException, SQLException{}
     
@@ -339,7 +339,7 @@ public class DBI{
              if(temp==null)
              temp ="";
              result[k][i] = temp; //store details of book
-            }
+            } 
             rst.next();
         }
     }
@@ -348,39 +348,38 @@ public class DBI{
    
     //Method to get list of books that belong to this shepherd, and Book Status is not Task Assigned or Published
     public String[][] getShepherdBookList(int empid) throws SQLException{ 
-    ResultSet rst = this.execQuery();
-    int columns = 4;
-    int records = RecordNum(rst);
+    ResultSet rst = this.execQuery("SELECT BookID, Title from Book "); // needs more detailed select
     String temp;
+    int records = RecordNum(rst);
+    int columns = 2;
     String [][] result = new String[records][columns]; // matrix to hold book list of data
-    if(rst.first())
-    {
-        for (int k = 0; k < records; k++){ //every row
-            for(int i = 0; i < columns; i++){ //every column
-             temp =rst.getString(book[i]);// get next data field in this row by field name
-             if(temp==null)
-             temp ="";
-             //store details of book list into matrix
-
-            }
-            rst.next();// get next record
-        }
-    }
+    //if(rst.first())
+    //{
+    //  { for every row
+    //    { for every column
+    //        // get next data field in this row by field name
+    //         if(temp==null)
+    //            temp ="";
+    //             store details of book list into matrix
+    //}
+    //         // get next record      
+    //}
+    //}
     // return book list
-        
+        return result;
     }
         
         
-            //Method to get list of tasks that belong to a tech
-    public String[][] getTechTaskList(int empid) throws SQLException{ 
-   
-        }
+   //Method to get list of tasks that belong to a tech
+   // public String[][] getTechTaskList(int empid) throws SQLException{ 
+   //
+     //   }
         
         
     //Method to get a selected task
-    public String[][] getSelectedTask(String taskid) throws SQLException{ 
-    
-        }
+    //public String[][] getSelectedTask(String taskid) throws SQLException{ 
+    //
+     //   }
    
 
     //Method to get information of a shepherd that was just assigned
@@ -503,7 +502,7 @@ public class DBI{
    }
    
         
-          //Method to change the status of a book when a task is complete
+          //Method to change the status of a book when a task is a problem
     public void BookTaskProblem(String taskid, String filename) throws SQLException{ 
       
    }
