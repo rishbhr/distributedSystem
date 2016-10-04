@@ -1,5 +1,5 @@
-<!-- ?? dispatches to this jsp -->
-<!-- This file ??  -->
+<!-- ViewTaskDetails dispatches to this jsp -->
+<!-- This file displays tasks that can be assigned to a Tech to work on for a particular book  -->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -15,7 +15,7 @@
 
 <p>Hello <jsp:getProperty name="shared" property="empFirstName"/>!</p> <!-- -->
 
-<!--  -->
+<!-- Button to redirect back to MainPage -->
 
 <a href="MainPage.jsp"><button type="button" style="float:left;">Main Page</button></a>
 <br><h2 align ="center"> Tasks Assigned</h2>
@@ -24,7 +24,7 @@
 String [][] taskdetails = shared.getTaskDetails();
 if(taskdetails != null && taskdetails.length != 0){
 %>
-<!--  -->
+<!-- Table used to display information -->
 <table align = "center" border = "2"  bgcolor="#F0F8FF" >
 <tr>
 <!-- Table headers-->
@@ -42,7 +42,7 @@ int count = 0;
 for(String[] details : taskdetails){
 %>
 <tr>
-<!--   -->
+<!-- Display information from array that correlates to the columns used in the query, this will display task details -->
 <td name="tasktype" align="center"><%=details[4]%></td>
 <td name="taskstatus" align="center"><%=details[6]%></td>
 <td name="startdate" align="center"><%=details[1]%></td>
@@ -68,7 +68,7 @@ else
 
 <h2 align = "center">Assign a task for the book</h2>
 
-<!--   -->
+<!-- Options for assigning different tasks, send to SelectTech after submit -->
 <form id = "AssignTask" name="AssignTask" method ="Post" action="SelectTech" align = "center">
 <select id = "Status" name ="Status">
 <option value="Scanning" id="Scanning">Scanning</option>
@@ -80,18 +80,18 @@ else
 <option value="Design a Promotion" id="DesignPromotion">Design a Promotion</option>
 <option value="Publish" id="Publish">Publish</option>
 </select>
-<input type="submit" name="AssignTask" value="Assign 1 Task"> <!--  -->
-<input type="submit" name="ParallelTask" value="Assign 1 Task and Assign Another"> <!--  -->
+<input type="submit" name="AssignTask" value="Assign 1 Task"> <!-- submit to SelectTech after assigning 1 task -->
+<input type="submit" name="ParallelTask" value="Assign 1 Task and Assign Another"> <!-- submit to SelectTech after assigning multiple tasks  -->
 </form>
 
-<!--  -->
+<!-- Function for sendback alert -->
 <script>
 function sendback(){
 alert("Book sent back to Production Manager");
 }
 </script>
 
-<!--   -->
+<!-- Forum for sending book back to production manager, on submit trigger sendback function alert -->
 <form align="center" method ="POST" name = "SendBookBack" action ="SendBookBack" onsubmit= "sendback();">
 <input type = "submit" name="sendback" value ="Send Book back to Production Manager">
 </form>

@@ -1,5 +1,5 @@
-<!-- -->
-<!-- This -->
+<!-- ConfirmTech dispatches to this jsp -->
+<!-- This file prints confirmation that a Tech has been assigned a task and displays that task -->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -28,10 +28,10 @@
 String [][] confirmtask = shared.getConfirmTask();
 if(confirmtask != null && confirmtask.length != 0){
 %>
-<!--  -->
+<!-- Table used to display information -->
 <table align = "center" border = "2"  bgcolor="#F0F8FF" >
 <tr>
-<!--  -->
+<!-- Table headers -->
      <th>Task ID</th>
      <th>Task Type</th>
 	 <th>Task Status</th>
@@ -45,7 +45,7 @@ int count = 0;
 for(String[] details : confirmtask){
 %>
 <tr>
-<!--   -->
+<!-- Display information from array that correlates to the columns used in the query -->
 <td name="taskID" align="center"><%=details[0]%></td>
 <td name="tasktype" align="center"><%=details[4]%></td>
 <td name="taskstatus" align="center"><%=details[6]%></td>
