@@ -1,5 +1,5 @@
 <!-- Login dispatches to this jsp -->
-<!-- This file displays the different links that are accessible to the manager, shepherd, and tachnician-->
+<!-- This file displays the different links that are accessible to the manager, shepherd, and technician-->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -36,7 +36,7 @@ else {
 %>
 <jsp:include page="Technician.html" flush = "true"/>
 <%
-} //End of else 
+} //End of else
 %>
 </body>
 

@@ -8,44 +8,44 @@ import java.io.Serializable;
 public class Shared implements Serializable {
 // session bean named "shared" Tomcat keeps alive between login sessions
 
-	private String error = "";            // string to hold error message
-	private String message = "";          // string to hold the message
+	private String error = "";                      // string to hold error message
+	private String message = "";                    // string to hold the message
 	
-	private int empid;            // employee's unique id number
-	private String EmpLastName;      // employee's last name
-    private String EmpFirstName;     // employee's first name
-    private String email;      // employee's email
-    private String title;            // employee's title
-    private String department;          // employee's department name
-    private String Manager;          // is employee a manager or not
-    private String commissionrate;   // commission rate if a salesman
-    private String shepherd;         // if the employee is shepherd capable (Y/N)
-    private String skill;         // employee's skill
-    private String [][] newContracts;
-    private String [][] selectedContract;
-    private String [][] selectedBook;
-    private String [][] selectedTask;
-    private String [][] shepherds;
-    private String [][] designers;
-    private String [][] editors;
-    private String [][] admins;
-    private String [][] books;
-    private String [][] confirmbook;
-    private String [][] confirmshepherd;
-    private String [][] confirmtask;
-    private String [][] shepherdcount;
-    private String [][] shepherdbooklist;
-     private String [][] techtasklist;
-    private String [][] taskdetails;
-    private String ChooseTaskStatus;
-    private String ContractID;
-    private String ShepherdID;
-    private String TechID;
-    private String TaskID;
-    private String BookID;
-    private String AuthorID;
-    private String authorlastname;
-    private String authorfirstname;
+	private int empid;                              // employee's unique id number
+	private String EmpLastName;                     // employee's last name
+    private String EmpFirstName;                    // employee's first name
+    private String email;                           // employee's email
+    private String title;                           // employee's title
+    private String department;                      // employee's department name
+    private String Manager;                         // is employee a manager or not
+    private String commissionrate;                  // commission rate if a salesman
+    private String shepherd;                        // if the employee is shepherd capable (Y/N)
+    private String skill;                           // employee's skill
+    private String [][] newContracts;               // array of new contracts
+    private String [][] selectedContract;           // array of contracts that are being accessed in the system
+    private String [][] selectedBook;               // array of books that are being accessed in the system
+    private String [][] selectedTask;               // array of the task that is being assigned
+    private String [][] shepherds;                  // array of shepherds
+    private String [][] designers;                  // array of designers
+    private String [][] editors;                    // array of editors
+    private String [][] admins;                     // array of admins
+    private String [][] books;                      // array of books
+    private String [][] confirmbook;                // array of confirmation of books
+    private String [][] confirmshepherd;            // array of confirmation of shepherd
+    private String [][] confirmtask;                // array of confirmation of task
+    private String [][] shepherdcount;              // array of confirmation of shepherd available
+    private String [][] shepherdbooklist;           // array of books that are assigned to a shepherd
+    private String [][] techtasklist;               // array of the tasks that are assigned to a tech
+    private String [][] taskdetails;                // array of details of task
+    private String ChooseTaskStatus;                // the status of task
+    private String ContractID;                      // id of contract
+    private String ShepherdID;                      // id of shepherd
+    private String TechID;                          // id of tech
+    private String TaskID;                          // id of task
+    private String BookID;                          // id of book
+    private String AuthorID;                        // id of authors
+    private String authorlastname;                  // last name of author
+    private String authorfirstname;                 // first name of author
 
 
 

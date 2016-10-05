@@ -3,7 +3,7 @@
 SelectBook.java
 
 
-  
+   + This servlet is invoked by
    + This servlet dispatches to SelectBook.jsp
    
 ******************************************************************************************/

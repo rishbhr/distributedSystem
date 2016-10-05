@@ -1,4 +1,4 @@
-<!-- SelectTech dispatches to this jsp -->
+<!-- SelectTech.java dispatches to this jsp -->
 <!-- This file displays the list of Technicians and their task count, and gives the user the option to select a Tech to assign to a task-->
 <!DOCTYPE HTML>
 <html>
