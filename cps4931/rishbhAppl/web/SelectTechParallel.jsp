@@ -20,13 +20,13 @@
 <a href="ViewTaskDetails.jsp"><button type="button" style="float:right;">Back to Assign Task</button></a>
 <a href="MainPage.jsp"><button type="button" style="float:left;">Main Page</button></a>
 <%
-// 
+// Array of the employees and their type
 String [][] designers = shared.getDesigners();
 String [][] editors = shared.getEditors();
 String [][] admins = shared.getAdmins();
 String status = shared.getChooseTaskStatus();
 
-//If 
+//If task is design cover then do the following in html
 if(status.equals("Design a Cover") || status.equals("Design a Promotion")){
 %>
 <h2 align="center">Designers</h2>
